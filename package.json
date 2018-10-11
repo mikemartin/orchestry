@@ -20,6 +20,7 @@
     "laravel-mix-purgecss": "^2.2.3",
     "tailwindcss-aspect-ratio": "^1.0.1",
     "vue": "^2.5.17",
+    "vue-progressbar": "^0.7.5",
     "vue-youtube": "^1.2.5",
     "vue-youtube-embed": "^2.2.1"
   },

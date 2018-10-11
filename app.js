@@ -120,3 +120,22 @@ const noise = () => {
 };
 
 noise();
+
+
+window.addEventListener('load', function() {
+  var videos = document.getElementsByClassName("mirror_img");
+
+  function checkLoad() {
+    console.log("check");
+      if (videos[0].readyState === 4) {
+        for(var i = 0; i < videos.length; i++){
+          videos[i].play();
+        }
+      } else {
+        console.log("check again");
+          setTimeout(checkLoad, 100);
+      }
+  }
+
+  checkLoad();
+}, false);
