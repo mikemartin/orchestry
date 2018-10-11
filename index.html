@@ -16,9 +16,22 @@
     <link rel="stylesheet" href="app.css">
   </head>
   <body class="bg-grey-darkest">
-    <video class="absolute pin object-cover opacity-50 w-full min-h-screen max-w-full" poster="brokenimage.jpg" type="video/mp4" muted loop webkit-playsinline playsinline autoplay="true">
-      <source src="brokenclip.mp4" type="video/mp4">
-    </video>
+    <canvas id="noise" class="noise"></canvas>
+    <div class="slide opacity-50">
+      <div class="mirror">
+        <div class="mirror_side">
+            <video class="mirror_img mirror_side_flip" poster="brokenimage.jpg" type="video/mp4" muted loop webkit-playsinline playsinline autoplay="true">
+              <source src="brokenclip.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="mirror_side">
+            <video class="mirror_img" poster="brokenimage.jpg" type="video/mp4" muted loop webkit-playsinline playsinline autoplay="true">
+              <source src="brokenclip.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+
     <div class="relative text-white text-center min-h-screen flex flex-col justify-between p-6 pb-10 z-10" id="app">
       <div class="absolute opacity-0 pin z-40 bg-black" v-show="isOpen" :class="{ 'opacity-100': isOpen }">
           <a @click="closeVideo" class="absolute z-50 pin-l pin-t md:text-xl uppercase tracking-wider p-2 text-white no-underline bg-grey-darkest-50 hover:bg-white hover:text-black" href="javascript:void(0)">
@@ -43,8 +56,8 @@
         <a class="text-xs md:text-sm text-white uppercase tracking-wider no-underline inline-block py-1 mx-1 md:mx-0 border-transparent border-b hover:border-white" href="https://m.me/orchestryband" target="_blank">Bookings</a>
       </header>
       <section class="my-6">
-        <h2 class="font-serif italic text-xl md:text-2xl tracking-wide mb-5">Video Premiere</h2>
-        <h3 class="font-serif text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide md:tracking-wider mb-10">Broken Mirror</h3>
+        <h2 class="font-serif italic text-xl md:text-2xl tracking-wide mb-5 text-shadow-lg">Video Premiere</h2>
+        <h3 class="font-serif text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide md:tracking-wider mb-10 text-shadow-lg">Broken Mirror</h3>
         <a @click="openVideo()" class="md:text-xl uppercase tracking-wider border border-white p-2 px-4 text-white no-underline bg-grey-darkest-50 hover:bg-white hover:text-black" href="javascript:void(0)">Play Video</a>
       </section>
       <footer>
