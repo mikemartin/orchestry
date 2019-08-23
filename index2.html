@@ -17,11 +17,21 @@
   </head>
   <body class="bg-grey-darkest">
     <canvas id="noise" class="noise"></canvas>
-    <div class="mirror">
-      <video class="mirror_img opacity-50" poster="brokenimage.jpg" type="video/mp4" muted loop webkit-playsinline playsinline preload="auto" autoplay="true">
-        <source src="brokenclip.mp4" type="video/mp4">
-      </video>  
+    <div class="slide opacity-50">
+      <div class="mirror">
+        <div class="mirror_side">
+            <video class="mirror_img" poster="brokenimage.jpg" type="video/mp4" muted loop webkit-playsinline playsinline preload="auto">
+              <source src="brokenclip.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="mirror_side mirror_side_flip">
+            <video class="mirror_img" poster="brokenimage.jpg" type="video/mp4" muted loop webkit-playsinline playsinline preload="auto">
+              <source src="brokenclip.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
     </div>
+
     <div class="relative text-white text-center min-h-screen flex flex-col justify-between p-6 pb-10 z-10" id="app">
       <div class="absolute opacity-0 pin z-40 bg-black" v-show="isOpen" :class="{ 'opacity-100': isOpen }">
           <a @click="closeVideo" class="absolute z-50 pin-l pin-t md:text-xl uppercase tracking-wider p-2 text-white no-underline bg-grey-darkest-50 hover:bg-white hover:text-black" href="javascript:void(0)">
@@ -56,14 +66,5 @@
         </footer>
     </div>
     <script type="text/javascript" src="build.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50405075-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-50405075-3');
-    </script>
   </body>
-  </html>
+</html>

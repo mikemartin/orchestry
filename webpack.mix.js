@@ -19,19 +19,12 @@ mix.sass('app.scss','app.css')
   }).js('app.js', 'build.js');
 
 mix.browserSync({
-  proxy: 'https://orchestry.test',
-  host: 'orchestry.test',
-  open: 'external',
-  port: 8000,
+  proxy: 'http://orchestry.test',
   files: [
     '*.css',
     '*.js',
     '*.html'
-  ],
-  https: {
-    key: '/Users/mike/.valet/Certificates/orchestry.test.key',
-    cert: '/Users/mike/.valet/Certificates/orchestry.test.crt'
-  }
+  ]
 });
 
 if (mix.inProduction()) {
