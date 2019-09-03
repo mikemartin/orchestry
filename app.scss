@@ -67,40 +67,21 @@
   .order-last { order: 1 }
 }
 
-.slide .mirror {
+.mirror {
   position: absolute;
   width: 100%;
   top: 0;
   bottom: 0;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
+  left: 0;
+  height: 100vh;
   filter:grayscale(100%);
-}
-
-.mirror {
-  width: 50vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-.mirror_side {
-  flex: none;
-  overflow: hidden;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: stretch;
 }
 
 .mirror_img {
   display: block;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-
-.mirror_side_flip {
-  transform: scale3d(-1,1,1);
 }
 
 .text-shadow-lg {
