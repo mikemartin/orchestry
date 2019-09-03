@@ -31,6 +31,38 @@
   opacity: 1;
 }
 
+.flickering {
+  animation: flickering 3s infinite;
+}
+
+.flickering-2 {
+  animation: flickering-2 3s infinite;
+}
+
+@keyframes flickering {
+  0% { opacity: 0; }
+  62% { opacity: 0; }
+  65% { opacity: 1; }
+  66% { opacity: 0; }
+  69% { opacity: 1; }
+  70% { opacity: 0; }
+  73% { opacity: 1; }
+  74% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes flickering-2 {
+  0% { opacity: 1; }
+  62% { opacity: 1; }
+  65% { opacity: 0; }
+  66% { opacity: 1; }
+  69% { opacity: 0; }
+  70% { opacity: 1; }
+  73% { opacity: 0; }
+  74% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
 @tailwind utilities;
 
 @responsive {
