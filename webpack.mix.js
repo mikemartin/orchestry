@@ -20,6 +20,7 @@ mix.sass('app.scss','app.css')
 
 mix.browserSync({
   proxy: 'http://orchestry.test',
+  port: 8000,
   files: [
     '*.css',
     '*.js',
