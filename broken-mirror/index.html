@@ -13,25 +13,25 @@
     <meta name="twitter:title" content="Video Premiere: Orchestry's 'Broken Mirror'" />
     <meta name="twitter:description" content="Watch the beautiful video for 'Broken Mirror' from Orchestry's debut album" />
     <link rel="stylesheet" href="https://use.typekit.net/lel7pjh.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="../app.css">
   </head>
   <body class="bg-violet-dark">
     <canvas id="noise" class="noise"></canvas>
     <div class="mirror">
-      <video class="mirror_img opacity-50" poster="brokenimage.jpg" type="video/mp4" muted loop webkit-playsinline playsinline preload="auto" autoplay="true">
-        <source src="brokenclip.mp4" type="video/mp4">
+      <video class="mirror_img opacity-50" poster="../brokenimage.jpg" type="video/mp4" muted loop webkit-playsinline playsinline preload="auto" autoplay="true">
+        <source src="../brokenclip.mp4" type="video/mp4">
       </video>  
     </div>
     <div class="relative text-white text-center min-h-screen flex flex-col justify-between p-6 pb-10 z-10" id="app">
-      <div class="absolute opacity-0 pin z-40 bg-black" v-show="isOpen" :class="{ 'opacity-100': isOpen }">
-          <a @click="closeVideo" class="absolute z-50 pin-l pin-t md:text-xl uppercase tracking-wider p-2 text-white no-underline bg-grey-darkest-50 hover:bg-white hover:text-black" href="javascript:void(0)">
+      <div class="absolute opacity-0 inset-0 z-40 bg-black" v-show="isOpen" :class="{ 'opacity-100': isOpen }">
+          <a @click="closeVideo" class="absolute z-50 left-0 top-0 md:text-xl uppercase tracking-wider p-2 text-white no-underline bg-grey-darkest-50 hover:bg-white hover:text-black" href="javascript:void(0)">
             <svg class="w-8 h-8 fill-current block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
               <path fill-rule="evenodd" d="M47.414 47.435a2.001 2.001 0 0 1-2.83 0l-12.6-12.6-12.589 12.59a2.002 2.002 0 0 1-2.83-2.831l12.588-12.589L16.567 19.42a2.001 2.001 0 0 1 2.83-2.83l12.587 12.586L44.58 16.577a2.001 2.001 0 1 1 2.83 2.83L34.815 32.006l12.6 12.6a2.001 2.001 0 0 1 0 2.83z"/>
             </svg>          
           </a>
         <div class="min-h-screen flex flex-col justify-center">
           <div class="aspect-ratio-16/9 relative h-0">
-            <youtube class="absolute pin w-full h-full" :video-id="videoId" ref="youtube" :player-vars="playerVars" />
+            <youtube class="absolute inset-0 w-full h-full" :video-id="videoId" ref="youtube" :player-vars="playerVars" />
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
         <p class="text-xs md:text-sm text-white uppercase tracking-wide">Follow us on <a class="text-white no-underline border-transparent border-b hover:border-white" href="https://www.facebook.com/orchestryband/" target="_blank">Facebook</a> <span class="font-serif italic">&amp;</span> <a class="text-white no-underline border-transparent border-b hover:border-white" href="https://www.instagram.com/orchestryofficial/" target="_blank">Instagram</a></p>
       </footer>
     </div>
-    <script type="text/javascript" src="build.js"></script>
+    <script type="text/javascript" src="../build.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50405075-3"></script>
     <script>
