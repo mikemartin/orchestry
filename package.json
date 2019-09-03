@@ -10,9 +10,6 @@
   },
   "author": "Mike Martin",
   "license": "ISC",
-  "dependencies": {
-    "tailwindcss": "^0.6.5"
-  },
   "devDependencies": {
     "browser-sync": "^2.24.7",
     "browser-sync-webpack-plugin": "^2.0.1",
@@ -25,5 +22,8 @@
     "vue-youtube-embed": "^2.2.1"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^1.1.2"
+  }
 }

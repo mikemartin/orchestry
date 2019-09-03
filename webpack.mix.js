@@ -15,7 +15,7 @@ require('laravel-mix-purgecss');
 mix.sass('app.scss','app.css')
   .options({
     processCssUrls: false,
-    postCss: [ tailwindcss('tailwind.js') ]
+    postCss: [ tailwindcss('tailwind.config.js') ]
   }).js('app.js', 'build.js');
 
 mix.browserSync({
