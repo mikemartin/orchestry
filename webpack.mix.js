@@ -34,7 +34,7 @@ if (mix.inProduction()) {
       globs: [
         '*.js',
         '*.css',
-        '*.html'
+        '**/*.html'
       ],
       extensions: ['html','js','svg'],
   })
